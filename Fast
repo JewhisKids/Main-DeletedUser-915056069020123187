@@ -218,13 +218,11 @@ local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPl
 			while wait(0) do
 				if  _G.FastAttack then
 					if SeraphFrame.activeController then
-						if v.Humanoid.Health > 0 then
 						SeraphFrame.activeController.timeToNextAttack = 0
 						SeraphFrame.activeController.focusStart = 0
 						SeraphFrame.activeController.hitboxMagnitude = 40
 						SeraphFrame.activeController.humanoid.AutoRotate = true
 						SeraphFrame.activeController.increment = 1 + 1 / 1
-						end
 					end
 				end
 			end
