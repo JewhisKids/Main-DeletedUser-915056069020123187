@@ -227,7 +227,7 @@ spawn(function()
                 STOPRL.wrapAttackAnimationAsync = function(a,b,c,d,func)
                 local Hits = STOPRL.getBladeHits(b,c,d)
                 if Hits then
-                    if _G.FastAttack then
+                    if makn then
                         STOP.play = function() end
                         a:Play(0.01,0.01,0.01)
                         func(Hits)
@@ -294,7 +294,7 @@ local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPl
 	task.spawn(
 		function()
 			while wait(0) do
-				if  _G.FastAttack then
+				if  makn then
 					if SeraphFrame.activeController then
 						SeraphFrame.activeController.timeToNextAttack = 0
 						SeraphFrame.activeController.focusStart = 0
@@ -341,7 +341,7 @@ local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPl
 	b = tick()
 	spawn(function()
 		while wait(0) do
-			if  _G.FastAttack then
+			if  makn then
 				if b - tick() > 0.75 then
 					wait(.2)
 					b = tick()
@@ -364,7 +364,7 @@ local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPl
 	k = tick()
 	spawn(function()
 		while wait(0) do
-			if  _G.FastAttack then
+			if makn then
 				if k - tick() > 0.75 then
 					wait(0)
 					k = tick()
@@ -433,7 +433,7 @@ local SeraphFrame = debug.getupvalues(require(game:GetService("Players").LocalPl
 					STOPRL.wrapAttackAnimationAsync = function(a,b,c,d,func)
 						local Hits = STOPRL.getBladeHits(b,c,d)
 						if Hits then
-							if  _G.FastAttack then
+							if  makn then
 								STOP.play = function() end
 								a:Play(10.1,9.1,8.1)
 								func(Hits)
